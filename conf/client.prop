@@ -1,0 +1,10 @@
+snUsername = WS_SN_DEPLOYER
+snPassword = 
+snClientId = 
+snClientSecret = 
+snRefreshLimitInSeconds = 28800
+snOAuthEndPoint = https://kp?.service-now.com/oauth_token.do
+backupFolder = C\:\\temp\\BackupUpdateSets\\
+updateSetListURL = https://kp?.service-now.com/api/now/table/sys_update_set?sysparm_fields=sys_id,name&sysparm_query=state%3Dcomplete%5Ebase_update_setISEMPTY%5Esys_updated_onONLast%203%20months%40javascript%3Ags.beginningOfLast3Months%28%29%40javascript%3Ags.endOfLast3Months%28%29%5Estate%3Dcomplete%5EORDERBYDESCsys_updated_on&sysparm_suppress_pagination_header=true
+loginPageURL = https://kp?.service-now.com/login.do
+updateSetURL = https://kp?.service-now.com/now/nav/ui/classic/params/target/sys_update_set.do%3Fsys_id%3D%SYS_ID%%26sysparm_record_target%3Dsys_update_set%26sysparm_record_row%3D6%26sysparm_record_rows%3D21336%26sysparm_record_list
