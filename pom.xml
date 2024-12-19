@@ -28,6 +28,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
 							<mainClass>gdaswani.sn.client.BackupUpdateSets</mainClass>
 						</manifest>
 					</archive>
@@ -106,7 +107,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.26.0</version>
+			<version>4.27.0</version>
 		</dependency>
 	</dependencies>
 </project>
