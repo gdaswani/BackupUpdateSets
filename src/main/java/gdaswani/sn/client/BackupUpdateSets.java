@@ -35,7 +35,7 @@ public class BackupUpdateSets {
 			if (logger != null) {
 				logger.log(Level.SEVERE, e.getMessage(), e);
 			}
-			
+
 		} finally {
 			if (logger != null) {
 				logger.log(Level.INFO, "ending, statusCode = " + status);
