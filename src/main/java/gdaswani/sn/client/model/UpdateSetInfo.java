@@ -6,29 +6,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public final class UpdateSetInfo {
 
-    private String sysId;
-    private String name;
+	private String sysId;
+	private String name;
 
-    @JsonProperty("sys_id")
-    public String getSysId() {
-	return sysId;
-    }
+	@JsonProperty("sys_id")
+	public String getSysId() {
+		return sysId;
+	}
 
-    public void setSysId(String sysId) {
-	this.sysId = sysId;
-    }
+	public void setSysId(String sysId) {
+		this.sysId = sysId;
+	}
 
-    @JsonProperty("name")
-    public String getName() {
-	return name;
-    }
+	@JsonProperty("name")
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-	this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String toString() {
-	return new ReflectionToStringBuilder(this).appendSuper(super.toString()).toString();
-    }
+	public String toString() {
+		return new ReflectionToStringBuilder(this).appendSuper(super.toString()).toString();
+	}
 
 }

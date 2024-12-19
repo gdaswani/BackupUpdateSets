@@ -10,39 +10,40 @@ import gdaswani.sn.client.tasks.PerformExport;
 
 public class BackupUpdateSets {
 
-    public static void main(final String[] args) {
+	public static void main(final String[] args) {
 
-	int status = ExitCode.EXIT_CODE_FAILURE;
+		int status = ExitCode.EXIT_CODE_FAILURE;
 
-	Logger logger = null;
+		Logger logger = null;
 
-	try {
+		try {
 
-	    LogManager.getLogManager().readConfiguration(new FileInputStream("conf/logging.properties"));
+			LogManager.getLogManager().readConfiguration(new FileInputStream("conf/logging.properties"));
 
-	    logger = Logger.getLogger(BackupUpdateSets.class.getName());
+			logger = Logger.getLogger(BackupUpdateSets.class.getName());
 
-	    logger.log(Level.INFO, "starting up");
+			logger.log(Level.INFO, "starting up");
 
-	    new PerformExport().run();
+			new PerformExport().run();
 
-	    status = ExitCode.EXIT_CODE_SUCCESS;
+			status = ExitCode.EXIT_CODE_SUCCESS;
 
-	} catch (Throwable e) {
+		} catch (Throwable e) {
 
-	    e.printStackTrace();
+			e.printStackTrace();
 
-	    if (logger != null) {
-		logger.log(Level.SEVERE, e.getMessage(), e);
-	    }
-	} finally {
-	    if (logger != null) {
-		logger.log(Level.INFO, "ending, statusCode = " + status);
-	    }
+			if (logger != null) {
+				logger.log(Level.SEVERE, e.getMessage(), e);
+			}
+			
+		} finally {
+			if (logger != null) {
+				logger.log(Level.INFO, "ending, statusCode = " + status);
+			}
+		}
+
+		System.exit(status);
+
 	}
-
-	System.exit(status);
-
-    }
 
 }

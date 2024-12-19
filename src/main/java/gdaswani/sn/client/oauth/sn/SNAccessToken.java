@@ -10,44 +10,44 @@ import gdaswani.sn.client.oauth.model.AccessToken;
 
 final class SNAccessToken extends AccessToken {
 
-    @JsonProperty("refresh_token")
-    private String refreshTokenValue;
+	@JsonProperty("refresh_token")
+	private String refreshTokenValue;
 
-    @JsonProperty("scope")
-    private String scope;
+	@JsonProperty("scope")
+	private String scope;
 
-    public SNAccessToken() {
-	super();
-    }
+	public SNAccessToken() {
+		super();
+	}
 
-    SNAccessToken(final String accessTokenValue, final String tokenType, final int expiresIn,
-	    final LocalDateTime generatedOn, final String refreshTokenValue, final String scope) {
+	SNAccessToken(final String accessTokenValue, final String tokenType, final int expiresIn,
+			final LocalDateTime generatedOn, final String refreshTokenValue, final String scope) {
 
-	super(accessTokenValue, tokenType, expiresIn, generatedOn);
+		super(accessTokenValue, tokenType, expiresIn, generatedOn);
 
-	this.refreshTokenValue = refreshTokenValue;
-	this.scope = scope;
+		this.refreshTokenValue = refreshTokenValue;
+		this.scope = scope;
 
-    }
+	}
 
-    public String getRefreshTokenValue() {
-	return refreshTokenValue;
-    }
+	public String getRefreshTokenValue() {
+		return refreshTokenValue;
+	}
 
-    public String getScope() {
-	return scope;
-    }
+	public String getScope() {
+		return scope;
+	}
 
-    public void setRefreshTokenValue(final String refreshTokenValue) {
-	this.refreshTokenValue = refreshTokenValue;
-    }
+	public void setRefreshTokenValue(final String refreshTokenValue) {
+		this.refreshTokenValue = refreshTokenValue;
+	}
 
-    public void setScope(final String scope) {
-	this.scope = scope;
-    }
+	public void setScope(final String scope) {
+		this.scope = scope;
+	}
 
-    public String toString() {
-	return new ReflectionToStringBuilder(this).appendSuper(super.toString()).toString();
-    }
+	public String toString() {
+		return new ReflectionToStringBuilder(this).appendSuper(super.toString()).toString();
+	}
 
 }

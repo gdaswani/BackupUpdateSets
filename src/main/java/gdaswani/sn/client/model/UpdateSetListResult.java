@@ -9,24 +9,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public final class UpdateSetListResult {
 
-    private List<UpdateSetInfo> result;
+	private List<UpdateSetInfo> result;
 
-    public UpdateSetListResult() {
-	super();
-	result = new ArrayList<>();
-    }
+	public UpdateSetListResult() {
+		super();
+		result = new ArrayList<>();
+	}
 
-    @JsonProperty("result")
-    public List<UpdateSetInfo> getResult() {
-	return result;
-    }
+	@JsonProperty("result")
+	public List<UpdateSetInfo> getResult() {
+		return result;
+	}
 
-    public void setValues(List<UpdateSetInfo> result) {
-	this.result = result;
-    }
+	public void setValues(List<UpdateSetInfo> result) {
+		this.result = result;
+	}
 
-    public String toString() {
-	return new ReflectionToStringBuilder(this).appendSuper(super.toString()).toString();
-    }
+	public String toString() {
+		return new ReflectionToStringBuilder(this).appendSuper(super.toString()).toString();
+	}
 
 }

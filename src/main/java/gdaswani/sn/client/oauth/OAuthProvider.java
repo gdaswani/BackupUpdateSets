@@ -4,6 +4,6 @@ import gdaswani.sn.client.oauth.model.AccessToken;
 
 public interface OAuthProvider {
 
-    AccessToken getAccessToken();
+	AccessToken getAccessToken();
 
 }
